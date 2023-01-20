@@ -89,6 +89,15 @@ else if ([1].indexOf(n) != -1){
        areaID = document.getElementById(`area${n + 6}`),
    ]
 }
+else if ([25].indexOf(n) != -1) {
+    areas = [
+
+        areaSE = document.getElementById(`area${n - 6}`),
+        areaSM = document.getElementById(`area${n - 5}`),
+
+        areaCE = document.getElementById(`area${n - 1}`),
+    ]
+}
 else{
      areas = [
 
