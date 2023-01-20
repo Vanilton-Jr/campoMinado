@@ -1,0 +1,28 @@
+*{
+    font-family: sans-serif;
+}
+
+
+.campo-container{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(255, 94, 0);
+    border: 1px solid black;
+}
+
+.area{
+    width: 100px;
+    height: 100px;
+    float: left;
+    position: relative;
+    text-align: center;
+    line-height: 98px;
+    background-color: rgb(160, 207, 176);
+    font-size: 1.4em;
+    color: aliceblue;
+}
+
+.minado{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
