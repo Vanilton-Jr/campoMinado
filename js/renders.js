@@ -4,6 +4,8 @@ function renderCampo(){
         area.classList.add("area")
         area.setAttribute('id', `area${i}`)
         area.setAttribute('onclick', `revelarNum(${i})`)
+        area.setAttribute('oncontextmenu', `bandeira(${i})`)
+
 
         if(i % 2 == 0){
             area.style.backgroundColor = 'rgb(0, 191, 73)'
@@ -11,6 +13,9 @@ function renderCampo(){
         else if(i % 2 != 0){
             area.style.backgroundColor = 'rgb(3, 121, 48)'
         }
+        area.addEventListener('contextmenu', (ev)=>{
+          ev.preventDefault(); // this will prevent browser default behavior 
+        });
         document.getElementById("campo-container").appendChild(area)
     }
   }
