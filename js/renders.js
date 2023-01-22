@@ -26,7 +26,7 @@ var cont = 0;
 
 function renderMinas() {
   var num = []
-  if (cont == 1) {
+
     for (let i = 0; i <= 5; i++) {
       var n = Math.floor(Math.random() * 25) + 1;
       var area = document.querySelector(`#area${n}`)
@@ -37,7 +37,6 @@ function renderMinas() {
 
       area.classList.add("minado")
     }
-  }
 
 }
 renderMinas()

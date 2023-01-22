@@ -43,9 +43,6 @@ function revelarNum(n) {
     area.style.backgroundColor = "rgb(160, 207, 176)"
     area.style.outline = '1px solid black';
     area.classList.add('revelado')
-  cont+=1;
-  console.log(cont)
-  renderMinas()
 
 }
 
@@ -172,11 +169,4 @@ function bandeira(i) {
 
     }
 
-}
-
-function primeiroCLick() {
-    if (cont <= 1) {
-
-    }
-    cont += 2;
 }
