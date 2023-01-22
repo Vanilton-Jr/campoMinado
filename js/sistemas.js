@@ -36,13 +36,17 @@ function revelarNum(n) {
         if (areas[i].classList.contains('minado') == true) {
             qnt += 1;
         }
-       
+
     }
 
     area.innerText = qnt;
     area.style.backgroundColor = "rgb(160, 207, 176)"
     area.style.outline = '1px solid black';
     area.classList.add('revelado')
+  cont+=1;
+  console.log(cont)
+  renderMinas()
+
 }
 
 let areas = [];
@@ -135,7 +139,7 @@ console.log(ban)
 var ban = false;
 var banN = [];
 
-for (let i = 0; i <= 25; i++) { 
+for (let i = 0; i <= 25; i++) {
     banN.push(`ban${i}`)
 }
 
@@ -145,31 +149,34 @@ console.log(banN)
 function bandeira(i) {
     var area = document.getElementById(`area${i}`)
     var ban = banN[i];
-     if (ban == true) {
-         area.style.backgroundImage = '';
-         if (area.classList.contains("minado") == true) {
-             area.setAttribute('onclick', 'fimDeJogo()')
-         }
-         if (area.classList.contains("minado") == false) {
-             area.setAttribute('onclick', `revelarNum(${i})`)
-         }
-         banN[i] = false ;
+    if (ban == true) {
+        area.style.backgroundImage = '';
+        if (area.classList.contains("minado") == true) {
+            area.setAttribute('onclick', 'fimDeJogo()')
+        }
+        if (area.classList.contains("minado") == false) {
+            area.setAttribute('onclick', `revelarNum(${i})`)
+        }
+        banN[i] = false;
 
-         area.classList.remove("bandeira")
-         console.log(ban)
-     }
-     else if (ban == false) {
-         area.style.backgroundImage = 'url(../img/bandeira.png)';
-         area.classList.add("bandeira")
-         area.removeAttribute('onclick', 'fimDeJogo()')
-         area.removeAttribute('onclick', `revelarNum(${i})`)
-         console.log(ban , i)
-         banN[i] = true;
+        area.classList.remove("bandeira")
+        console.log(ban)
+    }
+    else if (ban == false) {
+        area.style.backgroundImage = 'url(../img/bandeira.png)';
+        area.classList.add("bandeira")
+        area.removeAttribute('onclick', 'fimDeJogo()')
+        area.removeAttribute('onclick', `revelarNum(${i})`)
+        console.log(ban, i)
+        banN[i] = true;
 
-     }
+    }
 
 }
 
-function primeiro(){
+function primeiroCLick() {
+    if (cont <= 1) {
 
+    }
+    cont += 2;
 }
