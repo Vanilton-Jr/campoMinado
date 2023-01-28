@@ -66,6 +66,7 @@ body{
     transition: 2;
     top: -340px;
     border-radius: 10px;
+    color: rgb(16, 149, 100);
 }
 
 #texto{

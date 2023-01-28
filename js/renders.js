@@ -40,5 +40,3 @@ function renderMinas() {
 
 }
 renderMinas()
-
-renderMinas()  

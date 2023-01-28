@@ -23,11 +23,11 @@ function fimDeJogo() {
     }
     document.querySelector('#restart').style.top = "90px";
     document.querySelector('#restart').style.transition = ".8s";
-
+    vitoria()
 }
 
 function revelarNum(n) {
-    area = document.getElementById(`area${n}`);
+    var area = document.getElementById(`area${n}`);
 
     check5(n)
 
@@ -43,7 +43,7 @@ function revelarNum(n) {
     area.style.backgroundColor = "rgb(160, 207, 176)"
     area.style.outline = '1px solid black';
     area.classList.add('revelado')
-
+    vitoria()
 }
 
 let areas = [];
@@ -166,7 +166,23 @@ function bandeira(i) {
         area.removeAttribute('onclick', `revelarNum(${i})`)
         console.log(ban, i)
         banN[i] = true;
-
     }
+    vitoria()
+}
 
+function vitoria() {
+    var cont = 0;
+    for (let i = 1; i <= 25; i++) {
+        var area = document.getElementById(`area${i}`)
+        if (area.classList.contains("bandeira") == true || area.classList.contains("revelado") == true) {
+            cont++
+        }
+    }
+    if (cont == 25) {
+        document.querySelector('#restart').style.top = "90px";
+        document.querySelector('#restart').style.transition = ".8s";
+        document.querySelector('#restart').style.backgroundColor = "rgb(16, 252, 138)";
+        document.querySelector('#resultado').innerText = "GANHOU!!!";
+    }
+    console.log(cont)
 }
